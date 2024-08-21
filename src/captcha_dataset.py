@@ -34,7 +34,6 @@ class CaptchaDataset(Dataset):
         return id_to_file
 
     def _load_data_from_files(self, image_path, label_path):
-
         image_files = self._extract_file_ids(sorted(list(Path(image_path).rglob("*.jpg"))))
         label_files = self._extract_file_ids(sorted(list(Path(label_path).rglob("*.txt"))))
         if len(image_files) != len(label_files):

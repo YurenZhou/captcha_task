@@ -12,7 +12,7 @@
 ### Explanation of the solution
 
 1. Each captcha image is segmented into 5 character images first, each of which contains exactly 1 character
-2. Train a CNN model to inter character from the character image:
+2. Train a CNN model to infer character from the character image:
     1. Since the task is simple and training data is limited, the structure of the CNN is very simple
     2. Optuna is used to tune some of the hyper-parameters with leave-one-out cross-validation. Number of trials is set to be small for quicker run time
     3. After determining the best hyper-parameters, the final model is trained and saved
